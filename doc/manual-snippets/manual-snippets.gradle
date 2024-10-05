@@ -7,7 +7,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.github.erdi:webdriver-binaries-gradle-plugin:3.2.0-gradle8-dev.1'
+        classpath 'com.github.erdi:webdriver-binaries-gradle-plugin:3.2.0-gradle8'
     }
 }
 
