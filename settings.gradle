@@ -18,12 +18,12 @@ include "module",
     "internal:test-support-spock",
     "integration",
     "integration:geb-gradle",
-    "doc:asciidoctor-extension",
-    "doc:manual",
-    "doc:manual-snippets",
-    "doc:manual-snippets:fixtures",
-    "doc:manual-snippets:real-browser",
-    "doc:site"
+//    "doc:asciidoctor-extension",
+//    "doc:manual",
+//    "doc:manual-snippets",
+//    "doc:manual-snippets:fixtures",
+//    "doc:manual-snippets:real-browser",
+//    "doc:site"
 
 rootProject.name = 'geb'
 

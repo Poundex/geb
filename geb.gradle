@@ -11,9 +11,9 @@ configurations {
     site
 }
 
-dependencies {
-    site project(path: 'doc:site', configuration: 'distribution')
-}
+//dependencies {
+//    site project(path: 'doc:site', configuration: 'distribution')
+//}
 
 nexusPublishing {
     repositories {

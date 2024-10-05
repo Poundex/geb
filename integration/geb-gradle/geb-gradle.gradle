@@ -20,11 +20,11 @@ dependencies {
     }
 }
 
-pluginBundle {
-    website = "https://gebish.org/manual/current/#gradle-plugins"
-    vcsUrl = "https://github.com/geb/geb"
-    tags = ["geb", "testing", "cloud", "browser"]
-}
+//pluginBundle {
+//    website = "https://gebish.org/manual/current/#gradle-plugins"
+//    vcsUrl = "https://github.com/geb/geb"
+//    tags = ["geb", "testing", "cloud", "browser"]
+//}
 
 apply from: 'plugin-definitions.gradle'
 
