@@ -22,11 +22,27 @@ class DateTimeLocalInput extends AbstractInput {
     final String inputType = 'datetime-local'
 
     void setDateTime(LocalDateTime dateTime) {
-        value(dateTime.toString())
+        doSetDateTime(dateTime.toString())
     }
 
     void setDateTime(String iso8601FormattedDateTime) {
-        value(iso8601FormattedDateTime)
+        doSetDateTime(iso8601FormattedDateTime)
+    }
+    
+    private void doSetDateTime(String iso8601FormattedDateTime) {
+        String truncated = iso8601FormattedDateTime.substring(0, 23)
+        allElements().each { elem ->
+            browser.js.exec(elem, truncated, '''\
+              if (document.activeElement !== arguments[0]){
+                arguments[0].focus();
+              }
+              if (arguments[0].value != arguments[1]) {
+                arguments[0].value = arguments[1]
+                arguments[0].dispatchEvent(new InputEvent('input'));
+                arguments[0].dispatchEvent(new Event('change', { bubbles: true }));
+          }
+''')
+        }
     }
 
     LocalDateTime getDateTime() {
